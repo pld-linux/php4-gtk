@@ -13,10 +13,11 @@ Patch2:		%{name}-php_path.patch
 URL:		http://gtk.php.net/
 BuildRequires:	autoconf
 BuildRequires:	automake
+BuildRequires:	gtk+2-devel >= 2.1.0
+BuildRequires:	libglade-devel
 BuildRequires:	php4-cli
 BuildRequires:	php4-devel >= 4.3.0
-BuildRequires:	libglade-devel
-BuildRequires:	gtk+2-devel >= 2.1.0
+BuildRequires:	php4-pcre >= 4.3.0
 Requires:	php4-cli
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
