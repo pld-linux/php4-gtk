@@ -9,6 +9,7 @@ Source0:	http://gtk.php.net/distributions/php-gtk-%{version}.tar.gz
 # Source0-md5:	f6a884cc740086e246c2c0b0e6752214
 Patch0:		%{name}-object.patch
 Patch1:		%{name}-generator.patch
+Patch2:		%{name}-php_path.patch
 URL:		http://gtk.php.net/
 BuildRequires:	autoconf
 BuildRequires:	automake
@@ -45,6 +46,7 @@ przeznaczone do tworzenia samodzielnych aplikacji GUI.
 %setup -q -n php-gtk-%{version}
 %patch0 -p1
 %patch1 -p1
+%patch2 -p1
 
 %build
 phpize
@@ -52,8 +54,7 @@ phpize
 %{__autoconf}
 %configure
 
-%{__make} \
-	PHP=%{_bindir}/php4
+%{__make}
 
 %install
 rm -rf $RPM_BUILD_ROOT
