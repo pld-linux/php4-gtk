@@ -1,23 +1,22 @@
 Summary:	PHP language bindings for GTK+ toolkit
 Summary(pl):	Modu³ PHP z wi±zaniami do GTK+
-Name:		php-gtk
+Name:		php4-gtk
 Version:	1.0.1
 Release:	0.1
 License:	GPL
 Group:		Libraries
-Source0:	http://gtk.php.net/distributions/%{name}-%{version}.tar.gz
+Source0:	http://gtk.php.net/distributions/php-gtk-%{version}.tar.gz
 # Source0-md5:	f6a884cc740086e246c2c0b0e6752214
 Patch0:		%{name}-object.patch
 Patch1:		%{name}-generator.patch
 URL:		http://gtk.php.net/
 BuildRequires:	autoconf
 BuildRequires:	automake
-BuildRequires:	php-cgi
-BuildRequires:	php-devel >= 3:4.3.0
-BuildRequires:	php-devel < 3:4.4
+BuildRequires:	php4-cgi
+BuildRequires:	php4-devel >= 3:4.3.0
 BuildRequires:	libglade-devel
 BuildRequires:	gtk+2-devel >= 2.1.0
-Requires:	php-cgi
+Requires:	php4-cgi
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %define		_sysconfdir	/etc/php
@@ -59,9 +58,9 @@ phpize
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT%{_libdir}/php
+install -d $RPM_BUILD_ROOT%{_libdir}/php4
 
-install modules/php_gtk.so $RPM_BUILD_ROOT%{_libdir}/php/gtk.so
+install modules/php_gtk.so $RPM_BUILD_ROOT%{_libdir}/php4/gtk.so
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -69,4 +68,4 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc ChangeLog AUTHORS TODO NEWS
-%attr(755,root,root) %{_libdir}/php/*.so
+%attr(755,root,root) %{_libdir}/php4/*.so
