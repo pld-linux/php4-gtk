@@ -12,14 +12,12 @@ Patch1:		%{name}-generator.patch
 URL:		http://gtk.php.net/
 BuildRequires:	autoconf
 BuildRequires:	automake
-BuildRequires:	php4-cgi
-BuildRequires:	php4-devel >= 3:4.3.0
+BuildRequires:	php4-cli
+BuildRequires:	php4-devel >= 4.3.0
 BuildRequires:	libglade-devel
 BuildRequires:	gtk+2-devel >= 2.1.0
-Requires:	php4-cgi
+Requires:	php4-cli
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
-
-%define		_sysconfdir	/etc/php
 
 %description
 PHP-GTK is a PHP extension that enables you to write client-side
@@ -44,7 +42,7 @@ GTK+ przez przegl±darkê i nie mo¿e byæ u¿ywane w ¶rodowisku WWW. Jest
 przeznaczone do tworzenia samodzielnych aplikacji GUI.
 
 %prep
-%setup -q
+%setup -q -n php-gtk-%{version}
 %patch0 -p1
 %patch1 -p1
 
@@ -54,7 +52,8 @@ phpize
 %{__autoconf}
 %configure
 
-%{__make}
+%{__make} \
+	PHP=%{_bindir}/php4
 
 %install
 rm -rf $RPM_BUILD_ROOT
