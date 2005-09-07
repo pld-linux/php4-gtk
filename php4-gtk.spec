@@ -11,8 +11,6 @@ Patch0:		%{name}-object.patch
 Patch1:		%{name}-generator.patch
 Patch2:		%{name}-php_path.patch
 URL:		http://gtk.php.net/
-BuildRequires:	autoconf
-BuildRequires:	automake
 BuildRequires:	gtk+2-devel >= 1:2.1.0
 BuildRequires:	libglade-devel
 BuildRequires:	php4-cli
