@@ -1,0 +1,6 @@
+- fixed E:V-R in BuildRequires: php-devel
+- Requires/BuildRequires: php-cli
+- removed redefinition of sysconfdir - it's not used here anyway
+- fixed %setup
+- pass PHP=%{_bindir}/php4 to make
+- builds, works
