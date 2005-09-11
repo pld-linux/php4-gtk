@@ -1,0 +1,1 @@
+- removed %post/preun - it didn't do anything anyway
