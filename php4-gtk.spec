@@ -1,3 +1,6 @@
+%define		_modname	gtk
+%define		_sysconfdir	/etc/php4
+%define		extensionsdir	%(php-config --extension-dir 2>/dev/null)
 Summary:	PHP language bindings for GTK+ toolkit
 Summary(pl):	Modu³ PHP z wi±zaniami do GTK+
 Name:		php4-gtk
@@ -15,7 +18,9 @@ BuildRequires:	gtk+2-devel >= 1:2.1.0
 BuildRequires:	libglade-devel
 BuildRequires:	php4-cli
 BuildRequires:	php4-devel >= 4.3.0
+BuildRequires:	php4-devel < 3.4.0
 BuildRequires:	php4-pcre >= 4.3.0
+%requires_eq_to php4-common php4-devel
 Requires:	php4-cli
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -49,15 +54,15 @@ przeznaczone do tworzenia samodzielnych aplikacji GUI.
 
 %build
 phpize
-%configure
+%configure \
+	--with-php-config=%{_bindir}/php-config
 
 %{__make}
 
 %install
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT%{_libdir}/php4
-
-install modules/php_gtk.so $RPM_BUILD_ROOT%{_libdir}/php4/gtk.so
+install modules/php_gtk.so $RPM_BUILD_ROOT%{extensionsdir}/%{_modname}.so
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -65,4 +70,4 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc ChangeLog AUTHORS TODO NEWS
-%attr(755,root,root) %{_libdir}/php4/*.so
+%attr(755,root,root) %{extensionsdir}/%{_modname}.so
