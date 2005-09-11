@@ -1,5 +1,5 @@
---- php-gtk-1.0.1/config.m4~	2004-08-08 03:15:31.000000000 +0200
-+++ php-gtk-1.0.1/config.m4	2004-11-17 09:31:59.440932512 +0100
+--- ./config.m4~	2005-09-12 01:14:30.000000000 +0300
++++ ./config.m4	2005-09-12 01:15:54.000000000 +0300
 @@ -11,12 +11,12 @@
  
    PHP_PREFIX=`$PHP_CONFIG --prefix`
@@ -9,7 +9,7 @@
      PHP_VERSION=`$PHP_CONFIG --version`
  	AC_MSG_RESULT(found version $PHP_VERSION)
  	case $PHP_VERSION in
-        4.3*[)]
+        4.3*|4.4*[)]
 -	   PHP=$PHP_PREFIX/bin/php
 +	   PHP=$PHP_PREFIX/bin/php4
  	;;

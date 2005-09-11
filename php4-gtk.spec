@@ -4,12 +4,12 @@
 Summary:	PHP language bindings for GTK+ toolkit
 Summary(pl):	Modu³ PHP z wi±zaniami do GTK+
 Name:		php4-gtk
-Version:	1.0.1
-Release:	2
+Version:	1.0.2
+Release:	1
 License:	GPL
 Group:		Libraries
 Source0:	http://gtk.php.net/distributions/php-gtk-%{version}.tar.gz
-# Source0-md5:	f6a884cc740086e246c2c0b0e6752214
+# Source0-md5:	b11859c0778e40e53a14919a589db464
 Patch0:		%{name}-object.patch
 Patch1:		%{name}-generator.patch
 Patch2:		%{name}-php_path.patch
@@ -18,7 +18,6 @@ BuildRequires:	gtk+2-devel >= 1:2.1.0
 BuildRequires:	libglade-devel
 BuildRequires:	php4-cli
 BuildRequires:	php4-devel >= 4.3.0
-BuildRequires:	php4-devel < 3.4.0
 BuildRequires:	php4-pcre >= 4.3.0
 %requires_eq_to php4-common php4-devel
 Requires:	php4-cli
@@ -47,7 +46,7 @@ GTK+ przez przegl±darkê i nie mo¿e byæ u¿ywane w ¶rodowisku WWW. Jest
 przeznaczone do tworzenia samodzielnych aplikacji GUI.
 
 %prep
-%setup -q -n php-gtk-%{version}
+%setup -q -n php_gtk-%{version}
 %patch0 -p1
 %patch1 -p1
 %patch2 -p1
@@ -56,8 +55,7 @@ przeznaczone do tworzenia samodzielnych aplikacji GUI.
 phpize
 %configure \
 	--with-php-config=%{_bindir}/php-config
-
-%{__make}
+%{__make} -j1
 
 %install
 rm -rf $RPM_BUILD_ROOT
