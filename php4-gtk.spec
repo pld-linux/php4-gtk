@@ -14,7 +14,6 @@ Patch0:		%{name}-object.patch
 Patch1:		%{name}-generator.patch
 Patch2:		%{name}-php_path.patch
 URL:		http://gtk.php.net/
-BuildRequires:	gtk+2-devel >= 1:2.1.0
 BuildRequires:	libglade-devel
 BuildRequires:	php4-cli
 BuildRequires:	php4-devel >= 4.3.0
@@ -60,7 +59,7 @@ phpize
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT%{_libdir}/php4
+install -d $RPM_BUILD_ROOT%{extensionsdir}
 install modules/php_gtk.so $RPM_BUILD_ROOT%{extensionsdir}/%{_modname}.so
 
 %clean
