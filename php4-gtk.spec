@@ -17,8 +17,8 @@ URL:		http://gtk.php.net/
 BuildRequires:	gtk+-devel >= 1:1.2.6
 BuildRequires:	libglade-devel
 BuildRequires:	php4-cli
-BuildRequires:	php4-devel >= 4.3.0
-BuildRequires:	php4-pcre >= 4.3.0
+BuildRequires:	php4-devel >= 3:4.3.0
+BuildRequires:	php4-pcre
 BuildRequires:	rpmbuild(macros) >= 1.322
 %{?requires_php_extension}
 Requires:	php4-cli
