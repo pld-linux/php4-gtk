@@ -5,7 +5,7 @@ Summary:	PHP language bindings for GTK+ toolkit
 Summary(pl):	Modu³ PHP z wi±zaniami do GTK+
 Name:		php4-gtk
 Version:	1.0.2
-Release:	5
+Release:	6
 License:	GPL
 Group:		Libraries
 Source0:	http://gtk.php.net/distributions/php-gtk-%{version}.tar.gz
@@ -16,9 +16,9 @@ Patch2:		%{name}-php_path.patch
 URL:		http://gtk.php.net/
 BuildRequires:	gtk+-devel >= 1:1.2.6
 BuildRequires:	libglade-devel
+BuildRequires:	php(pcre)
 BuildRequires:	php4-cli
 BuildRequires:	php4-devel >= 3:4.3.0
-BuildRequires:	php4-pcre
 BuildRequires:	rpmbuild(macros) >= 1.322
 %{?requires_php_extension}
 Requires:	php4-cli
