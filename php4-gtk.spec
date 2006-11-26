@@ -22,7 +22,6 @@ BuildRequires:	php4-pcre >= 4.3.0
 BuildRequires:	rpmbuild(macros) >= 1.322
 %{?requires_php_extension}
 Requires:	php4-cli
-Obsoletes:	php-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
