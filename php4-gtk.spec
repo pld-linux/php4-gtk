@@ -2,7 +2,7 @@
 %define		_sysconfdir	/etc/php4
 %define		extensionsdir	%(php-config --extension-dir 2>/dev/null)
 Summary:	PHP language bindings for GTK+ toolkit
-Summary(pl):	Modu³ PHP z wi±zaniami do GTK+
+Summary(pl.UTF-8):   ModuÅ‚ PHP z wiÄ…zaniami do GTK+
 Name:		php4-gtk
 Version:	1.0.2
 Release:	7
@@ -36,15 +36,15 @@ This extension will _not_ allow you to display GTK+ programs in a Web
 browser, and cannot be used in the Web environment. It is intended for
 creating standalone GUI applications.
 
-%description -l pl
-PHP-GTK jest rozszerzeniem PHP które pozwala pisaæ klienckie przeno¶ne
+%description -l pl.UTF-8
+PHP-GTK jest rozszerzeniem PHP ktÃ³re pozwala pisaÄ‡ klienckie przenoÅ›ne
 aplikacje typu GUI. To jest pierwsze rozszerzenie tego typu i jednym z
-celów które przy¶wieca³y jego autorom by³o pokazanie ¿e PHP jest
-jêzykiem skryptowym ogólnego zastosowania, który pasuje do czego¶
-wiêcej ni¿ tylko aplikacje WWW.
+celÃ³w ktÃ³re przyÅ›wiecaÅ‚y jego autorom byÅ‚o pokazanie Å¼e PHP jest
+jÄ™zykiem skryptowym ogÃ³lnego zastosowania, ktÃ³ry pasuje do czegoÅ›
+wiÄ™cej niÅ¼ tylko aplikacje WWW.
 
-To rozszerzenie _nie_pozwala_ na u¿ywanie programów korzystaj±cych z
-GTK+ przez przegl±darkê i nie mo¿e byæ u¿ywane w ¶rodowisku WWW. Jest
+To rozszerzenie _nie_pozwala_ na uÅ¼ywanie programÃ³w korzystajÄ…cych z
+GTK+ przez przeglÄ…darkÄ™ i nie moÅ¼e byÄ‡ uÅ¼ywane w Å›rodowisku WWW. Jest
 przeznaczone do tworzenia samodzielnych aplikacji GUI.
 
 %prep
