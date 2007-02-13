@@ -2,7 +2,7 @@
 %define		_sysconfdir	/etc/php4
 %define		extensionsdir	%(php-config --extension-dir 2>/dev/null)
 Summary:	PHP language bindings for GTK+ toolkit
-Summary(pl.UTF-8):   Moduł PHP z wiązaniami do GTK+
+Summary(pl.UTF-8):	Moduł PHP z wiązaniami do GTK+
 Name:		php4-gtk
 Version:	1.0.2
 Release:	7
