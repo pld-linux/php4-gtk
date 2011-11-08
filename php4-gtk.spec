@@ -5,7 +5,7 @@ Summary:	PHP language bindings for GTK+ toolkit
 Summary(pl.UTF-8):	Moduł PHP z wiązaniami do GTK+
 Name:		php4-gtk
 Version:	1.0.2
-Release:	8
+Release:	9
 License:	GPL
 Group:		Libraries
 Source0:	http://gtk.php.net/distributions/php-gtk-%{version}.tar.gz
